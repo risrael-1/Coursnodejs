@@ -10,10 +10,7 @@ app.get('/', (req, res) => {
     res.send("Bonjour !");
 })
 
-// TODO: demander au serveur applicatif d'attendre des requêtes depuis le port spécifié plus haut
-app.listen(PORT, () => {
-    
-})
+
 
 // TODO: ajouter le point d'entrée `GET /hello?nom=XXX` comme spécifié dans l'énoncé
 app.get('/hello', function (req, res) {
@@ -35,4 +32,9 @@ app.post('/chat', function (req, res) {
     } else if (msg === 'météo') {
         res.send('Il fait beau');
     }
+})
+
+// TODO: demander au serveur applicatif d'attendre des requêtes depuis le port spécifié plus haut
+app.listen(PORT, () => {
+    console.log('Example app listening on port ' + PORT)
 })
